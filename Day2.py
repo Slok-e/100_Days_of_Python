@@ -16,4 +16,4 @@ bill_split = int(input("How man people will be splitting the bill? "))
 
 total_per_person = total_bill * tip / bill_split
 
-print(f"Each person should pay {round(total_per_person, 2)}")
+print(f"Each person should pay ${round(total_per_person, 2)}")
