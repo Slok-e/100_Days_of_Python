@@ -9,7 +9,7 @@ position = input("Where do you want to put the treasure? ")
 
 #Write your code below this row 👇
 # Use list comprehension to change the input into a list
-
+# This could be tic tac toe
 choice = [int(x) for x in position]
 
 if choice[0] == 1 and choice[1] == 1:
