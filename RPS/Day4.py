@@ -60,3 +60,5 @@ if choice == 2 and pc_choice == rps[0]:
 if choice == 2 and pc_choice == rps[1]:
     print(f"You chose Scissors{rps[choice]}\n Your opponent chose Paper{pc_choice}.\n")
     print("You Win!")
+else:
+    print("You Typed an invalid Number, You lose.")
