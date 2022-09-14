@@ -1,38 +1,62 @@
-# 🚨 Don't change the code below 👇
-row1 = ["⬜️","️⬜️","️⬜️"]
-row2 = ["⬜️","⬜️","️⬜️"]
-row3 = ["⬜️️","⬜️️","⬜️️"]
-map = [row1, row2, row3]
-print(f"{row1}\n{row2}\n{row3}")
-position = input("Where do you want to put the treasure? ")
-# 🚨 Don't change the code above 👆
+import random
 
-#Write your code below this row 👇
-# Use list comprehension to change the input into a list
-# This could be tic tac toe
-choice = [int(x) for x in position]
+# RPS Choices
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
 
-if choice[0] == 1 and choice[1] == 1:
-    map[0][0] = "X"
-if choice[0] == 2 and choice[1] == 1:
-    map[0][1] = "X"
-if choice[0] == 3 and choice[1] == 1:
-    map[0][2] = "X"
-if choice[0] == 1 and choice[1] == 2:
-    map[1][0] = "X"
-if choice[0] == 1 and choice[1] == 3:
-    map[2][0] = "X"
-if choice[0] == 2 and choice[1] == 2:
-    map[1][1] = "X"
-if choice[0] == 2 and choice[1] == 3:
-    map[2][1] = "X"
-if choice[0] == 3 and choice[1] == 2:
-    map[1][2] = "X"
-if choice[0] == 3 and choice[1] == 3:
-    map[2][2] = "X"
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
 
-#Write your code above this row 👆
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+# Rock, Paper, Scissors as a list
+rps = [rock, paper, scissors]
 
-# 🚨 Don't change the code below 👇
-print(f"{row1}\n{row2}\n{row3}")
-
+#User Choice
+choice = int(input("What do you choose? Type '0' for Rock, '1' for Paper or '2' for Scissors.\n"))
+pc_choice = random.choice(rps)
+if choice == 0 and pc_choice == rps[0]:
+    print(f"You chose Rock{rps[choice]}\n Your opponent chose Rock{pc_choice}\n")
+    print("It's a Draw")
+if choice == 1 and pc_choice == rps[1]:
+    print(f"You chose Paper{rps[choice]}\n Your opponent chose Paper{pc_choice}.\n")
+    print("It's a Draw")
+if choice == 2 and pc_choice == rps[2]:
+    print(f"You chose Scissors{rps[choice]}\n Your opponent chose Scissors{pc_choice}.\n")
+    print("It's a Draw")
+if choice == 0 and pc_choice == rps[1]:
+    print(f"You chose Rock{rps[choice]}\n Your opponent chose Paper{pc_choice}.\n")
+    print("You Lose")
+if choice == 0 and pc_choice == rps[2]:
+    print(f"You chose Rock{rps[choice]}\n Your opponent chose Scissor{pc_choice}.\n")
+    print("You Win!")
+if choice == 1 and pc_choice == rps[0]:
+    print(f"You chose Paper{rps[choice]}\n Your opponent chose Rock{pc_choice}.\n")
+    print("You Win!")
+if choice == 1 and pc_choice == rps[2]:
+    print(f"You chose Paper{rps[choice]}\n Your opponent chose Scissors{pc_choice}.\n")
+    print("You lose")
+if choice == 2 and pc_choice == rps[0]:
+    print(f"You chose Scissors{rps[choice]}\n Your opponent chose Rock{pc_choice}.\n")
+    print("You lose")
+if choice == 2 and pc_choice == rps[1]:
+    print(f"You chose Scissors{rps[choice]}\n Your opponent chose Paper{pc_choice}.\n")
+    print("You Win!")
