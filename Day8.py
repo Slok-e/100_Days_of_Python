@@ -12,8 +12,8 @@
 
 # greet_with_name("Jo")
 
-# def greet_with(name, location):
-#     print(f"Hello {name}.")
-#     print(f"What is it like in {location}?")
+def greet_with(name, location):
+    print(f"Hello {name}.")
+    print(f"What is it like in {location}?")
 
-# greet_with("John", location="Europe")
+greet_with("John", location="Europe")
