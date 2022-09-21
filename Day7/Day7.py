@@ -1,4 +1,5 @@
 import random
+import os
 from words import word_list
 from art import stages, logo
 
@@ -20,6 +21,8 @@ for _ in range(word_length):
 
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
+
+    os.system("clear")
 
     #Check if letter already guessed.
     if guess in guessed_letters:
