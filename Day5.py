@@ -10,7 +10,7 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 password = []
-for l_char in range(0, nr_letters):
+for l_char in range(nr_letters):
     password += random.choice(letters)
 
 for n_char in range(nr_numbers):
